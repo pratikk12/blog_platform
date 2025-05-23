@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { registerUser } from "../services/api";
 import "../styles/signup.css";
 
-function SignUp() {
+function Signup() {
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -61,9 +61,9 @@ function SignUp() {
         <button type="submit">Register</button>
       </form>
       <p>Already have an account?</p>
-      <button onClick={() => navigate("/login")}>Login</button>
+      <button onClick={() => navigate("/login")} className="login-btn">Login</button>
     </div>
   );
 }
 
-export default SignUp;
+export default Signup;

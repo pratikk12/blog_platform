@@ -1,11 +1,19 @@
 /* styles/signup.css */
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
 .formContainer {
-  max-width: 400px;
   margin: 3rem auto;
   padding: 2rem;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 400px;
 }
 
 .registration-form {
@@ -13,16 +21,46 @@
   flex-direction: column;
 }
 
-.registration-form input {
-  margin-bottom: 1rem;
+.registration-form input,
+.registration-form button {
+  height: 32px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  outline: none;
+  padding: 3px 6px;
+}
+.login-btn {
+  height: 32px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  outline: none;
+  padding: 3px 6px;
+  cursor: pointer;
 }
 
 .registration-form button {
   background-color: #007bff;
+  color: white;
+  cursor: pointer;
 }
 
 .registration-form button:hover {
   background-color: #0056b3;
+}
+
+.signup-btn {
+  margin-top: 1rem;
+  background-color: #007bff;
+  height: 32px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  outline: none;
+  padding: 3px 6px;
+  cursor: pointer;
+  color: white;
 }
 
 @media screen and (max-width: 600px) {

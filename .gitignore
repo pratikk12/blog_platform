@@ -1,0 +1,6 @@
+blog_backend/node_modules/
+blog_backend/.env
+blog_client/node_modules/
+blog_client/.env
+.DS_Store
+*.log

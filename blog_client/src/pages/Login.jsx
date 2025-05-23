@@ -24,29 +24,33 @@ function Login({ setIsLoggedIn }) {
   };
 
   return (
-    <div className="formContainer">
-      <h1>Login User</h1>
-      <form onSubmit={handleLogin} className="login-form">
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter Email"
-          required
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Enter Password"
-          required
-        />
-        <button type="submit">Login</button>
-      </form>
-      <p>Don't have an account</p>
-      <button onClick={() => navigate("/signup")} className="signup-btn">
-        Signup
-      </button>
+    <div className="main-container">
+      <div className="formContainer">
+        <h1>Login User</h1>
+        <form onSubmit={handleLogin} className="login-form">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter Email"
+            required
+          />
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter Password"
+            required
+          />
+          <button type="submit" className="login-btn">
+            Login
+          </button>
+        </form>
+        <p>{`Don't have an account?`}</p>
+        <button onClick={() => navigate("/signup")} className="signup-btn">
+          Signup
+        </button>
+      </div>
     </div>
   );
 }
