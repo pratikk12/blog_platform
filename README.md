@@ -76,7 +76,7 @@ This platform is designed to provide a **user-friendly interface** for blogging.
 
 1. Navigate to the frontend folder:
    ```bash
-   cd blog_clent
+   cd blog_client
 
 2. Install dependencies:
    npm install
