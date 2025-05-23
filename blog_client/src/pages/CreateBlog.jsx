@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { createPost } from "../services/api";
 import "../styles/CreateBlog.css";
+import { useNavigate } from "react-router-dom";
 
 const CreateBlog = () => {
   const [title, setTitle] = useState("");
   const [summary, setSummary] = useState("");
   const [content, setContent] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -13,6 +15,7 @@ const CreateBlog = () => {
       const response = await createPost({ title, summary, content });
       alert("Post created!");
       console.log(response.data);
+      navigate("/home");
     } catch (error) {
       alert("Error creating post");
       console.error(error);
