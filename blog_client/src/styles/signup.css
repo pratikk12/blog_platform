@@ -1,0 +1,33 @@
+/* styles/signup.css */
+.formContainer {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-form input {
+  margin-bottom: 1rem;
+}
+
+.registration-form button {
+  background-color: #007bff;
+}
+
+.registration-form button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 600px) {
+  .formContainer {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+}
