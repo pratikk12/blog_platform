@@ -19,6 +19,7 @@ app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
+    maxAge: 1000 * 60 * 60 * 24,
     cookie: { secure: false } // secure: true in production with HTTPS
 }));
 

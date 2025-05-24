@@ -6,9 +6,9 @@ const { isAuthenticated } = require('../middlewares/authMiddleware');
 router.get('/', postController.getAllPosts);
 
 router.get('/user/myposts', isAuthenticated, postController.getUserPosts);
+router.get('/:id', postController.getPostById);
 
 router.use(isAuthenticated); // Protect routes below
-router.get('/:id', postController.getPostById);
 
 router.post('/', postController.createPost);
 router.put('/:id', postController.updatePost);

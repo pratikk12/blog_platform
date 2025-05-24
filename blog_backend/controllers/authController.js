@@ -50,7 +50,7 @@ exports.login = async (req, res) => {
     }
 };
 
-// You can also add logout handler to destroy the session
+
 exports.logout = (req, res) => {
     req.session.destroy(err => {
         if (err) return res.status(500).json({ message: 'Logout failed' });

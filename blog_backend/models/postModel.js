@@ -12,7 +12,7 @@ exports.createPost = ({ author_name, title, summary, content, author_id }) => {
 
 exports.getAllPosts = () => {
     const q = `
-      SELECT blog_posts.id, blog_posts.author_name,blog_posts.title,  blog_posts.summary, blog_posts.content, blog_posts.author_id, blog_posts.created_at, users.username 
+      SELECT blog_posts.id, blog_posts.author_name,blog_posts.title, blog_posts.summary, blog_posts.content, blog_posts.author_id, blog_posts.created_at, users.username 
       FROM blog_posts 
       JOIN users ON blog_posts.author_id = users.id 
       ORDER BY blog_posts.created_at DESC
